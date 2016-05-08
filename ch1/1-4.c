@@ -1,0 +1,25 @@
+/*************************************************************************
+	> File Name: 1-4.c
+	> Author: 
+	> Mail: 
+	> Created Time: 2016年05月08日 星期日 13时03分05秒
+ ************************************************************************/
+#include "apue.h"
+
+#define BUFFESIZE 4096
+
+int main(void)
+{
+    int n;
+    char buf[BUFFESIZE];
+
+    while ((n = read(STDIN_FILENO, buf, BUFFESIZE)) > 0)
+        if (write(STDOUT_FILENO, buf, n) != n)
+            err_sys("write error");
+
+    if (n < 0)
+        err_sys("read error");
+
+    exit(0);
+
+}
