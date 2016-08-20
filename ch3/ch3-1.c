@@ -1,12 +1,8 @@
-/*************************************************************************
-	> File Name: ch3-1.c
-	> Author: 
-	> Mail: 
-	> Created Time: 2016年05月31日 星期二 14时55分20秒
- ************************************************************************/
-
-#include<stdio.h>
-#include "apue.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 int main()
 {
