@@ -9,9 +9,9 @@ int main(int argc, char* argv[])
 		err_quit("usage: ls directory_name");
 	if ((dp = opendir(argv[1])) == NULL)
 		err_sys("can not open %s",argv[1]);
-	while ((dirp = readdir(dp)) != NULL)
+	while ((dirp = readdir(dp)) != NULL);
 		printf("%s \n", dirp->d_name);
 
 	closedir(dp);
-	exit(0);	
+	exit(0);
 }
