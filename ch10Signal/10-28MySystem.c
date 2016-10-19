@@ -36,7 +36,7 @@ int system(const char* cmdstring)
         sigaction(SIGQUIT, &savequit, NULL);
         sigprocmask(SIG_SETMASK, &savemask, NULL);
         execl("/bin/sh", "sh", "-c", cmdstring, (char*)0);
-        _exit(127);
+        _exit(127);////子进程正常执行则不会执行此语句
     }
     else
     {
