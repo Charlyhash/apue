@@ -27,4 +27,6 @@ int main()
         printf("waitpid error\n");
         exit(1);
     }
+
+    exit(0);
 }
